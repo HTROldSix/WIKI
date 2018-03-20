@@ -1,0 +1,31 @@
+…or create a new repository on the command line
+echo "# CIT" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/HTROldSix/CIT.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/HTROldSix/CIT.git
+git push -u origin master
+
+1. 导出最后一次提交修改过的文件	
+git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
+2. 导出两次提交之间修改过的文件
+git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)
+
+查看apk签名 keytool -printcert -file C:\Users\qi.tao.RAGENT\Desktop\CERT.RSA
+查看apk信息 aapt dump badging file.apk > fileInfo.xml
+反编译 apktool.bat d -f [apk文件 ] [输出文件夹]
+
+常用指令
+adb shell setenfoce 0  //关闭SELinux防火墙
+adb shell pm path PACKAGE-NAME
+adb shell getprop ro.com.google.gmsversion
+adb shell screenrecord /sdcard/demo.mp4
+adb shell ps | findstr PACKAGE-NAME
+adb shell dumpsys window w | findstr \/ | findstr name=  查看当前activity
+adb shell dumpsys window |findstr mCurrent 查看当前activity
+
+在Android L版本中，Google团队为了优化系统性能、提高安全性等等一些列需求，重构了SettingsProvider模块，
+在L版本中，不在使用数据库来存储系统设置，而是通过xml将系统设置存储在了/data/system/user/0/settings_ 目录下 

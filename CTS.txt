@@ -1,0 +1,110 @@
+CTS环境配置：
+
+
+
+
+1.        准备一台测试机器A,一张可以打电话发短信的sim卡,一张16g的高速tf卡(推荐闪迪class10等级,读写速度95M/s),还需要能够连接youtube网站的网络(推荐使用2M的香港专线)
+
+2.        首先把A恢复出厂设置,然后连接电脑在terminal下进入到media文件夹输入一下命令拷贝文件到A的内存中:
+
+./copy_media.sh
+
+3.        然后安装CtsDelegatingAccessibilityService.apk和CtsDeviceAdmin.apk,
+
+4.        接下来在A中设置如下选项
+
+a)        Wi-Fi打开并连接网络
+
+b)        Bluetooth打开
+
+c)        Display的Sleep选择15minutes
+
+d)        Location打开并且Mode选择Highaccuracy
+
+e)        Security的Screen lock选择None,Deviceadministrator下把安装的CtsDelegatingAccessibilityService.apk和CtsDeviceAdmin.apk勾选上,取消Unknownsource和Verify apps项
+
+f)         Language&input下Language选择English(UnitedStates),取消Google voice typing的勾选
+
+g)        Add account下登陆Google账户
+
+h)        Date&time下取消Automatictime zone的勾选,在Select time zone下选择Azores(GMT+0:00),勾选User 24-hour format
+
+i)          Developer options打开,勾选Stayawake,USB debugging,Allow mock locations
+
+5.        以上设置完成后在terminal输入以下命令开始测试CTS:
+
+Run cts –plan CTS –s 机器id号
+
+ 
+
+附CTS测试命令:
+
+run cts --plan + <plan name> 运行某个plan，查看当前支持的plan，运行l p，实际上所有的plan存放在android-cts/repository/plans；
+
+run cts --package/-p 运行某一个测试包；
+
+run cts --class/-c [--method/-m] 运行某一个测试类或测试方法；
+
+run cts --continue-session session_ID 继续运行之前没有完成的CTS测试，要知道它的session_ID；
+
+run cts [options] --serial/s device_ID 在某个串号的设备上进行CTS测试，对应多个机器的时候，通过adb devices能够查看当前连接的所有设备的串号；
+
+run cts [options] --shards number_of_shards在多个设备上同时运行CTS测试，如run cts --plan CTS --shards 2，在两个设备上同时运行；
+
+run cts --help/--help-all 展示更多帮助
+
+
+
+查看列表：
+
+查看行为是l/list，接不同的参数显示对应信息。
+
+d/devices 当前连接的设备，效果同adbdevices，不过信息更详细，还有设备电量信息；
+
+packages 当前CTS plan的所有测试包；
+
+p/plan 当前所支持的CTS plan有哪些；
+
+i/invocations 当前CTS的运行状态；
+
+c/commands 展示出用户输入过的命令；
+
+r/results 展示以往的测试结果
+
+Audio Frequency Microphone Test
+Audio Frequency Speaker Test
+Audio Frequency Unprocessed Test
+MTP Host Test  四项OTG支持的需要测试
+
+-m CtsMediaTestCases -t android.media.cts.VisualizerTest  http://192.168.80.2:8080/#/c/128187/ 修改开关
+
+-m CtsDevicePolicyManagerTestCases -t com.android.cts.devicepolicy.MixedManagedProfileOwnerTest#testAlwaysOnVpn 三方应用报错也会导致此条case不过
+
+-m GtsNetTestCases -t com.google.android.net.gts.policy.DataSaverTest#testRequiredWhitelist 需要插入SIM测试
+
+-m CtsHardwareTestCases -t android.hardware.cts.SensorTest#testSensorOperations Attempt to invoke virtual method 'int android.hardware.Sensor.getType()' on a null object reference
+[SOLUTION]
+若不支持compass，请移除如下档案中的compass语句：
+/frameworks/native/data/etc/android.hardware.sensor.compass.xml
+/frameworks/native/data/etc/handheld_core_hardware.xml
+
+CtsGraphicsTestCases
+CtsThemeHostTestCases
+CtsWidgetTestCases  DPI修改测试
+
+8.0测试
+使用CTS测试包进行CTS测试，这里需要注意的是，整跑需要加上参数o，否则测试会停住，如run cts -o
+使用GTS测试包进行GTS测试，同N平台
+使用VTS测试包进行VTS测试，需要烧录AOSP的镜像文件，步骤
+1. 打开开发者选项中的 OEM unlocking
+2. 打开开发者选项中的 USB debugging
+3. 按音量上键+power键进入fastboot模式
+4. 连接电脑, 输入“fastboot flashing unlock” 选择是
+5. 输入“fastboot oem unlock” 选择是
+6. 输入“fastboot flash system system.img”
+7. fastboot reboot
+这样烧录步骤就完成了，接下来在测试机执行run vts 即可！
+使用VTS测试包进行CTS测试，同样需要烧录AOSP的镜像文件，命令为run cts-on-gsi
+手动测试CV
+
+Android Google认证 -CTS认证问题小结 - CSDN博客
