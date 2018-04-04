@@ -1,31 +1,52 @@
-��or create a new repository on the command line
+﻿…or create a new repository on the command line
 echo "# CIT" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/HTROldSix/CIT.git
 git push -u origin master
-��or push an existing repository from the command line
+…or push an existing repository from the command line
 git remote add origin https://github.com/HTROldSix/CIT.git
 git push -u origin master
 
-1. �������һ���ύ�޸Ĺ����ļ�	
+1. 导出最后一次提交修改过的文件	
 git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
-2. ���������ύ֮���޸Ĺ����ļ�
+2. 导出两次提交之间修改过的文件
 git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)
 
-�鿴apkǩ�� keytool -printcert -file C:\Users\qi.tao.RAGENT\Desktop\CERT.RSA
-�鿴apk��Ϣ aapt dump badging file.apk > fileInfo.xml
-������ apktool.bat d -f [apk�ļ� ] [����ļ���]
+查看apk签名 keytool -printcert -file C:\Users\qi.tao.RAGENT\Desktop\CERT.RSA
+查看apk信息 aapt dump badging file.apk > fileInfo.xml
+反编译 apktool.bat d -f [apk文件 ] [输出文件夹]
+       d2j-dex2jar.bat D:\反编译\dex2jar-2.0\classes.dex
 
-����ָ��
-adb shell setenfoce 0  //�ر�SELinux����ǽ
+常用指令
+adb shell setenfoce 0  //关闭SELinux防火墙
 adb shell pm path PACKAGE-NAME
 adb shell getprop ro.com.google.gmsversion
 adb shell screenrecord /sdcard/demo.mp4
 adb shell ps | findstr PACKAGE-NAME
-adb shell dumpsys window w | findstr \/ | findstr name=  �鿴��ǰactivity
-adb shell dumpsys window |findstr mCurrent �鿴��ǰactivity
+adb shell dumpsys window w | findstr \/ | findstr name=  查看当前activity
+adb shell dumpsys window |findstr mCurrent 查看当前activity
 
-��Android L�汾�У�Google�Ŷ�Ϊ���Ż�ϵͳ���ܡ���߰�ȫ�Եȵ�һЩ�������ع���SettingsProviderģ�飬
-��L�汾�У�����ʹ�����ݿ����洢ϵͳ���ã�����ͨ��xml��ϵͳ���ô洢����/data/system/user/0/settings_ Ŀ¼�� 
+在Android L版本中，Google团队为了优化系统性能、提高安全性等等一些列需求，重构了SettingsProvider模块，
+在L版本中，不在使用数据库来存储系统设置，而是通过xml将系统设置存储在了/data/system/user/0/settings_ 目录下 
+
+[FAQ06612] UI画面显示问题需要给mtk提供的相关资讯?
+
+针对2），这是主要问题，下面给出解决问题操作流程：
+
+i. 确保对比机在同样网络条件下可以搜索到，并将此应用下载下来(file.apk)
+
+ii. 使用aapt（aapt即AndroidAssetPackagingTool,在SDK的platform-tools目录下）命令
+
+       aapt dump badging file.apk > fileInfo.xml
+
+       此命令用于查看APK包的packageName、versionCode、applicationLabel、launcherActivity、permission等各种详细信息，请记录应用uses-feature和uses-library项
+
+iii. 手机连接pc，使用命令：
+
+       adb shell dumpsys package > package.xml
+
+       此命令可显示手机可供应用查询到的library和feature
+
+iiii. 对比应用需要的与手机声明的feature和library，

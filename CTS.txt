@@ -1,110 +1,110 @@
-CTS»·¾³ÅäÖÃ£º
+ï»¿CTSç¯å¢ƒé…ç½®ï¼š
 
 
 
 
-1.        ×¼±¸Ò»Ì¨²âÊÔ»úÆ÷A,Ò»ÕÅ¿ÉÒÔ´òµç»°·¢¶ÌĞÅµÄsim¿¨,Ò»ÕÅ16gµÄ¸ßËÙtf¿¨(ÍÆ¼öÉÁµÏclass10µÈ¼¶,¶ÁĞ´ËÙ¶È95M/s),»¹ĞèÒªÄÜ¹»Á¬½ÓyoutubeÍøÕ¾µÄÍøÂç(ÍÆ¼öÊ¹ÓÃ2MµÄÏã¸Û×¨Ïß)
+1.        å‡†å¤‡ä¸€å°æµ‹è¯•æœºå™¨A,ä¸€å¼ å¯ä»¥æ‰“ç”µè¯å‘çŸ­ä¿¡çš„simå¡,ä¸€å¼ 16gçš„é«˜é€Ÿtfå¡(æ¨èé—ªè¿ªclass10ç­‰çº§,è¯»å†™é€Ÿåº¦95M/s),è¿˜éœ€è¦èƒ½å¤Ÿè¿æ¥youtubeç½‘ç«™çš„ç½‘ç»œ(æ¨èä½¿ç”¨2Mçš„é¦™æ¸¯ä¸“çº¿)
 
-2.        Ê×ÏÈ°ÑA»Ö¸´³ö³§ÉèÖÃ,È»ºóÁ¬½ÓµçÄÔÔÚterminalÏÂ½øÈëµ½mediaÎÄ¼ş¼ĞÊäÈëÒ»ÏÂÃüÁî¿½±´ÎÄ¼şµ½AµÄÄÚ´æÖĞ:
+2.        é¦–å…ˆæŠŠAæ¢å¤å‡ºå‚è®¾ç½®,ç„¶åè¿æ¥ç”µè„‘åœ¨terminalä¸‹è¿›å…¥åˆ°mediaæ–‡ä»¶å¤¹è¾“å…¥ä¸€ä¸‹å‘½ä»¤æ‹·è´æ–‡ä»¶åˆ°Açš„å†…å­˜ä¸­:
 
 ./copy_media.sh
 
-3.        È»ºó°²×°CtsDelegatingAccessibilityService.apkºÍCtsDeviceAdmin.apk,
+3.        ç„¶åå®‰è£…CtsDelegatingAccessibilityService.apkå’ŒCtsDeviceAdmin.apk,
 
-4.        ½ÓÏÂÀ´ÔÚAÖĞÉèÖÃÈçÏÂÑ¡Ïî
+4.        æ¥ä¸‹æ¥åœ¨Aä¸­è®¾ç½®å¦‚ä¸‹é€‰é¡¹
 
-a)        Wi-Fi´ò¿ª²¢Á¬½ÓÍøÂç
+a)        Wi-Fiæ‰“å¼€å¹¶è¿æ¥ç½‘ç»œ
 
-b)        Bluetooth´ò¿ª
+b)        Bluetoothæ‰“å¼€
 
-c)        DisplayµÄSleepÑ¡Ôñ15minutes
+c)        Displayçš„Sleepé€‰æ‹©15minutes
 
-d)        Location´ò¿ª²¢ÇÒModeÑ¡ÔñHighaccuracy
+d)        Locationæ‰“å¼€å¹¶ä¸”Modeé€‰æ‹©Highaccuracy
 
-e)        SecurityµÄScreen lockÑ¡ÔñNone,DeviceadministratorÏÂ°Ñ°²×°µÄCtsDelegatingAccessibilityService.apkºÍCtsDeviceAdmin.apk¹´Ñ¡ÉÏ,È¡ÏûUnknownsourceºÍVerify appsÏî
+e)        Securityçš„Screen locké€‰æ‹©None,Deviceadministratorä¸‹æŠŠå®‰è£…çš„CtsDelegatingAccessibilityService.apkå’ŒCtsDeviceAdmin.apkå‹¾é€‰ä¸Š,å–æ¶ˆUnknownsourceå’ŒVerify appsé¡¹
 
-f)         Language&inputÏÂLanguageÑ¡ÔñEnglish(UnitedStates),È¡ÏûGoogle voice typingµÄ¹´Ñ¡
+f)         Language&inputä¸‹Languageé€‰æ‹©English(UnitedStates),å–æ¶ˆGoogle voice typingçš„å‹¾é€‰
 
-g)        Add accountÏÂµÇÂ½GoogleÕË»§
+g)        Add accountä¸‹ç™»é™†Googleè´¦æˆ·
 
-h)        Date&timeÏÂÈ¡ÏûAutomatictime zoneµÄ¹´Ñ¡,ÔÚSelect time zoneÏÂÑ¡ÔñAzores(GMT+0:00),¹´Ñ¡User 24-hour format
+h)        Date&timeä¸‹å–æ¶ˆAutomatictime zoneçš„å‹¾é€‰,åœ¨Select time zoneä¸‹é€‰æ‹©Azores(GMT+0:00),å‹¾é€‰User 24-hour format
 
-i)          Developer options´ò¿ª,¹´Ñ¡Stayawake,USB debugging,Allow mock locations
+i)          Developer optionsæ‰“å¼€,å‹¾é€‰Stayawake,USB debugging,Allow mock locations
 
-5.        ÒÔÉÏÉèÖÃÍê³ÉºóÔÚterminalÊäÈëÒÔÏÂÃüÁî¿ªÊ¼²âÊÔCTS:
+5.        ä»¥ä¸Šè®¾ç½®å®Œæˆååœ¨terminalè¾“å…¥ä»¥ä¸‹å‘½ä»¤å¼€å§‹æµ‹è¯•CTS:
 
-Run cts ¨Cplan CTS ¨Cs »úÆ÷idºÅ
+Run cts â€“plan CTS â€“s æœºå™¨idå·
 
  
 
-¸½CTS²âÊÔÃüÁî:
+é™„CTSæµ‹è¯•å‘½ä»¤:
 
-run cts --plan + <plan name> ÔËĞĞÄ³¸öplan£¬²é¿´µ±Ç°Ö§³ÖµÄplan£¬ÔËĞĞl p£¬Êµ¼ÊÉÏËùÓĞµÄplan´æ·ÅÔÚandroid-cts/repository/plans£»
+run cts --plan + <plan name> è¿è¡ŒæŸä¸ªplanï¼ŒæŸ¥çœ‹å½“å‰æ”¯æŒçš„planï¼Œè¿è¡Œl pï¼Œå®é™…ä¸Šæ‰€æœ‰çš„planå­˜æ”¾åœ¨android-cts/repository/plansï¼›
 
-run cts --package/-p ÔËĞĞÄ³Ò»¸ö²âÊÔ°ü£»
+run cts --package/-p è¿è¡ŒæŸä¸€ä¸ªæµ‹è¯•åŒ…ï¼›
 
-run cts --class/-c [--method/-m] ÔËĞĞÄ³Ò»¸ö²âÊÔÀà»ò²âÊÔ·½·¨£»
+run cts --class/-c [--method/-m] è¿è¡ŒæŸä¸€ä¸ªæµ‹è¯•ç±»æˆ–æµ‹è¯•æ–¹æ³•ï¼›
 
-run cts --continue-session session_ID ¼ÌĞøÔËĞĞÖ®Ç°Ã»ÓĞÍê³ÉµÄCTS²âÊÔ£¬ÒªÖªµÀËüµÄsession_ID£»
+run cts --continue-session session_ID ç»§ç»­è¿è¡Œä¹‹å‰æ²¡æœ‰å®Œæˆçš„CTSæµ‹è¯•ï¼Œè¦çŸ¥é“å®ƒçš„session_IDï¼›
 
-run cts [options] --serial/s device_ID ÔÚÄ³¸ö´®ºÅµÄÉè±¸ÉÏ½øĞĞCTS²âÊÔ£¬¶ÔÓ¦¶à¸ö»úÆ÷µÄÊ±ºò£¬Í¨¹ıadb devicesÄÜ¹»²é¿´µ±Ç°Á¬½ÓµÄËùÓĞÉè±¸µÄ´®ºÅ£»
+run cts [options] --serial/s device_ID åœ¨æŸä¸ªä¸²å·çš„è®¾å¤‡ä¸Šè¿›è¡ŒCTSæµ‹è¯•ï¼Œå¯¹åº”å¤šä¸ªæœºå™¨çš„æ—¶å€™ï¼Œé€šè¿‡adb devicesèƒ½å¤ŸæŸ¥çœ‹å½“å‰è¿æ¥çš„æ‰€æœ‰è®¾å¤‡çš„ä¸²å·ï¼›
 
-run cts [options] --shards number_of_shardsÔÚ¶à¸öÉè±¸ÉÏÍ¬Ê±ÔËĞĞCTS²âÊÔ£¬Èçrun cts --plan CTS --shards 2£¬ÔÚÁ½¸öÉè±¸ÉÏÍ¬Ê±ÔËĞĞ£»
+run cts [options] --shards number_of_shardsåœ¨å¤šä¸ªè®¾å¤‡ä¸ŠåŒæ—¶è¿è¡ŒCTSæµ‹è¯•ï¼Œå¦‚run cts --plan CTS --shards 2ï¼Œåœ¨ä¸¤ä¸ªè®¾å¤‡ä¸ŠåŒæ—¶è¿è¡Œï¼›
 
-run cts --help/--help-all Õ¹Ê¾¸ü¶à°ïÖú
+run cts --help/--help-all å±•ç¤ºæ›´å¤šå¸®åŠ©
 
 
 
-²é¿´ÁĞ±í£º
+æŸ¥çœ‹åˆ—è¡¨ï¼š
 
-²é¿´ĞĞÎªÊÇl/list£¬½Ó²»Í¬µÄ²ÎÊıÏÔÊ¾¶ÔÓ¦ĞÅÏ¢¡£
+æŸ¥çœ‹è¡Œä¸ºæ˜¯l/listï¼Œæ¥ä¸åŒçš„å‚æ•°æ˜¾ç¤ºå¯¹åº”ä¿¡æ¯ã€‚
 
-d/devices µ±Ç°Á¬½ÓµÄÉè±¸£¬Ğ§¹ûÍ¬adbdevices£¬²»¹ıĞÅÏ¢¸üÏêÏ¸£¬»¹ÓĞÉè±¸µçÁ¿ĞÅÏ¢£»
+d/devices å½“å‰è¿æ¥çš„è®¾å¤‡ï¼Œæ•ˆæœåŒadbdevicesï¼Œä¸è¿‡ä¿¡æ¯æ›´è¯¦ç»†ï¼Œè¿˜æœ‰è®¾å¤‡ç”µé‡ä¿¡æ¯ï¼›
 
-packages µ±Ç°CTS planµÄËùÓĞ²âÊÔ°ü£»
+packages å½“å‰CTS plançš„æ‰€æœ‰æµ‹è¯•åŒ…ï¼›
 
-p/plan µ±Ç°ËùÖ§³ÖµÄCTS planÓĞÄÄĞ©£»
+p/plan å½“å‰æ‰€æ”¯æŒçš„CTS planæœ‰å“ªäº›ï¼›
 
-i/invocations µ±Ç°CTSµÄÔËĞĞ×´Ì¬£»
+i/invocations å½“å‰CTSçš„è¿è¡ŒçŠ¶æ€ï¼›
 
-c/commands Õ¹Ê¾³öÓÃ»§ÊäÈë¹ıµÄÃüÁî£»
+c/commands å±•ç¤ºå‡ºç”¨æˆ·è¾“å…¥è¿‡çš„å‘½ä»¤ï¼›
 
-r/results Õ¹Ê¾ÒÔÍùµÄ²âÊÔ½á¹û
+r/results å±•ç¤ºä»¥å¾€çš„æµ‹è¯•ç»“æœ
 
 Audio Frequency Microphone Test
 Audio Frequency Speaker Test
 Audio Frequency Unprocessed Test
-MTP Host Test  ËÄÏîOTGÖ§³ÖµÄĞèÒª²âÊÔ
+MTP Host Test  å››é¡¹OTGæ”¯æŒçš„éœ€è¦æµ‹è¯•
 
--m CtsMediaTestCases -t android.media.cts.VisualizerTest  http://192.168.80.2:8080/#/c/128187/ ĞŞ¸Ä¿ª¹Ø
+-m CtsMediaTestCases -t android.media.cts.VisualizerTest  http://192.168.80.2:8080/#/c/128187/ ä¿®æ”¹å¼€å…³
 
--m CtsDevicePolicyManagerTestCases -t com.android.cts.devicepolicy.MixedManagedProfileOwnerTest#testAlwaysOnVpn Èı·½Ó¦ÓÃ±¨´íÒ²»áµ¼ÖÂ´ËÌõcase²»¹ı
+-m CtsDevicePolicyManagerTestCases -t com.android.cts.devicepolicy.MixedManagedProfileOwnerTest#testAlwaysOnVpn ä¸‰æ–¹åº”ç”¨æŠ¥é”™ä¹Ÿä¼šå¯¼è‡´æ­¤æ¡caseä¸è¿‡
 
--m GtsNetTestCases -t com.google.android.net.gts.policy.DataSaverTest#testRequiredWhitelist ĞèÒª²åÈëSIM²âÊÔ
+-m GtsNetTestCases -t com.google.android.net.gts.policy.DataSaverTest#testRequiredWhitelist éœ€è¦æ’å…¥SIMæµ‹è¯•
 
 -m CtsHardwareTestCases -t android.hardware.cts.SensorTest#testSensorOperations Attempt to invoke virtual method 'int android.hardware.Sensor.getType()' on a null object reference
 [SOLUTION]
-Èô²»Ö§³Öcompass£¬ÇëÒÆ³ıÈçÏÂµµ°¸ÖĞµÄcompassÓï¾ä£º
+è‹¥ä¸æ”¯æŒcompassï¼Œè¯·ç§»é™¤å¦‚ä¸‹æ¡£æ¡ˆä¸­çš„compassè¯­å¥ï¼š
 /frameworks/native/data/etc/android.hardware.sensor.compass.xml
 /frameworks/native/data/etc/handheld_core_hardware.xml
 
 CtsGraphicsTestCases
 CtsThemeHostTestCases
-CtsWidgetTestCases  DPIĞŞ¸Ä²âÊÔ
+CtsWidgetTestCases  DPIä¿®æ”¹æµ‹è¯•
 
-8.0²âÊÔ
-Ê¹ÓÃCTS²âÊÔ°ü½øĞĞCTS²âÊÔ£¬ÕâÀïĞèÒª×¢ÒâµÄÊÇ£¬ÕûÅÜĞèÒª¼ÓÉÏ²ÎÊıo£¬·ñÔò²âÊÔ»áÍ£×¡£¬Èçrun cts -o
-Ê¹ÓÃGTS²âÊÔ°ü½øĞĞGTS²âÊÔ£¬Í¬NÆ½Ì¨
-Ê¹ÓÃVTS²âÊÔ°ü½øĞĞVTS²âÊÔ£¬ĞèÒªÉÕÂ¼AOSPµÄ¾µÏñÎÄ¼ş£¬²½Öè
-1. ´ò¿ª¿ª·¢ÕßÑ¡ÏîÖĞµÄ OEM unlocking
-2. ´ò¿ª¿ª·¢ÕßÑ¡ÏîÖĞµÄ USB debugging
-3. °´ÒôÁ¿ÉÏ¼ü+power¼ü½øÈëfastbootÄ£Ê½
-4. Á¬½ÓµçÄÔ, ÊäÈë¡°fastboot flashing unlock¡± Ñ¡ÔñÊÇ
-5. ÊäÈë¡°fastboot oem unlock¡± Ñ¡ÔñÊÇ
-6. ÊäÈë¡°fastboot flash system system.img¡±
+8.0æµ‹è¯•
+ä½¿ç”¨CTSæµ‹è¯•åŒ…è¿›è¡ŒCTSæµ‹è¯•ï¼Œè¿™é‡Œéœ€è¦æ³¨æ„çš„æ˜¯ï¼Œæ•´è·‘éœ€è¦åŠ ä¸Šå‚æ•°oï¼Œå¦åˆ™æµ‹è¯•ä¼šåœä½ï¼Œå¦‚run cts -o
+ä½¿ç”¨GTSæµ‹è¯•åŒ…è¿›è¡ŒGTSæµ‹è¯•ï¼ŒåŒNå¹³å°
+ä½¿ç”¨VTSæµ‹è¯•åŒ…è¿›è¡ŒVTSæµ‹è¯•ï¼Œéœ€è¦çƒ§å½•AOSPçš„é•œåƒæ–‡ä»¶ï¼Œæ­¥éª¤
+1. æ‰“å¼€å¼€å‘è€…é€‰é¡¹ä¸­çš„ OEM unlocking
+2. æ‰“å¼€å¼€å‘è€…é€‰é¡¹ä¸­çš„ USB debugging
+3. æŒ‰éŸ³é‡ä¸Šé”®+poweré”®è¿›å…¥fastbootæ¨¡å¼
+4. è¿æ¥ç”µè„‘, è¾“å…¥â€œfastboot flashing unlockâ€ é€‰æ‹©æ˜¯
+5. è¾“å…¥â€œfastboot oem unlockâ€ é€‰æ‹©æ˜¯
+6. è¾“å…¥â€œfastboot flash system system.imgâ€
 7. fastboot reboot
-ÕâÑùÉÕÂ¼²½Öè¾ÍÍê³ÉÁË£¬½ÓÏÂÀ´ÔÚ²âÊÔ»úÖ´ĞĞrun vts ¼´¿É£¡
-Ê¹ÓÃVTS²âÊÔ°ü½øĞĞCTS²âÊÔ£¬Í¬ÑùĞèÒªÉÕÂ¼AOSPµÄ¾µÏñÎÄ¼ş£¬ÃüÁîÎªrun cts-on-gsi
-ÊÖ¶¯²âÊÔCV
+è¿™æ ·çƒ§å½•æ­¥éª¤å°±å®Œæˆäº†ï¼Œæ¥ä¸‹æ¥åœ¨æµ‹è¯•æœºæ‰§è¡Œrun vts å³å¯ï¼
+ä½¿ç”¨VTSæµ‹è¯•åŒ…è¿›è¡ŒCTSæµ‹è¯•ï¼ŒåŒæ ·éœ€è¦çƒ§å½•AOSPçš„é•œåƒæ–‡ä»¶ï¼Œå‘½ä»¤ä¸ºrun cts-on-gsi
+æ‰‹åŠ¨æµ‹è¯•CV
 
-Android GoogleÈÏÖ¤ -CTSÈÏÖ¤ÎÊÌâĞ¡½á - CSDN²©¿Í
+Android Googleè®¤è¯ -CTSè®¤è¯é—®é¢˜å°ç»“ - CSDNåšå®¢
